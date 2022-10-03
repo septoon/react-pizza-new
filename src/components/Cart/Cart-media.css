@@ -1,0 +1,134 @@
+@media screen and (max-width: 414px) {
+	.content {
+		padding: 0;
+	}
+
+	.container--cart {
+		margin-top: 0;
+		height: 100vh;
+	}
+	
+	.empty_cart {
+		height: 90vh;
+		padding: 0 1vw;
+		position: relative;
+	}
+
+	.empty_cart h2 {
+		margin-top: 10vh;
+		margin-bottom: 2vh;
+	}
+
+	.empty_cart p {
+		margin-bottom: 2vh;
+	}
+	
+	.cart_back_btn {
+		position: absolute;
+		bottom: 10vh;
+		left: 2vw;
+		padding: 11px 18px;
+		background-color: #FE5F1E;
+		color: #fff;
+		font-size: 1em;
+    font-weight: bold;
+    border-radius: 10px;
+	}
+	/* Если в корзине что-то есть */
+	.cart {
+		margin-top: 8vh;
+		height: 90vh;
+	}
+
+	.cart__top {
+		margin-left: 5%;
+		height: 10vh;
+	}
+
+	.cart .content__title {
+		display: none;
+	}
+
+	.content__items {
+		height: 55vh;
+		overflow: scroll;
+		display: block;
+	}
+
+	.cart__item {
+		margin-top: .5vh;
+		height: 10vh;
+		padding: 0;
+		background-color: rgba(204, 204, 204, 0.15);
+		justify-content: space-around;
+	}
+
+	.cart__item-img img {
+		height: 6vh;
+		width: 7vh;
+	}
+
+	.cart__item-info h3 {
+		font-size: 16px;
+	}
+
+	.cart__item-count, .cart__item-price {
+		width: auto;
+	}
+	
+	.cart__item-count b {
+		font-size: 18px;
+	}
+	.cart__item-price b {
+		font-size: 18px;
+	}
+
+	.cart__item-count-minus, .cart__item-count-plus, .cart__item-remove {
+		display: none;
+	}
+
+	.cart__bottom {
+		margin: 0;
+		height: 18vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+	}
+
+	.cart__bottom-details {
+		margin-left: 5%;
+		flex-direction: column;
+		align-items: start;
+	}
+
+	.cart__bottom-details span {
+		font-size: 18px;
+	}
+
+	.cart__bottom-buttons {
+    margin-top: 0;
+		justify-content: space-around;
+		margin-bottom: 1vh;
+	}
+
+	.cart__bottom-buttons .pay-btn {
+		padding: 0;
+	}
+
+	.cart_bottom button {
+		font-size: 14px;
+		width: 47vw;
+		padding: 11px 0;
+		background-color: #FE5F1E;
+		color: #fff;
+    font-weight: bold;
+    border-radius: 8px;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		button {
+			border: none;
+		}
+	}
+
+}

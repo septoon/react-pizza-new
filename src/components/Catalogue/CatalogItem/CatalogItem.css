@@ -1,0 +1,277 @@
+.catalog_item {
+  padding: 5px;
+  width: 24%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: .3s;
+  margin-top: 10px;
+}
+
+.catalog_item_block {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.image {
+  margin-bottom: 20px;
+  max-width: 75%;
+}
+
+.name {
+  font-family: 'Jost', sans-serif;
+  font-size: 1.3em;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.description {
+  margin-bottom: 10px;
+  font-family: 'Jost', sans-serif;
+  font-size: .9em;
+  font-weight: 300;
+}
+
+.name_holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50px;
+}
+
+.size {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 15px;
+}
+
+.size_item {
+  width: 34%;
+  font-family: 'Jost', sans-serif;
+  font-size: 1em;
+  font-weight: 600;
+  border: .5px solid #ddd;
+  border-radius: 5px;
+  padding: 5px 8px;
+}
+
+.packing_item {
+  width: 100%;
+  font-family: 'Jost', sans-serif;
+  font-size: .8em;
+  font-weight: 500;
+  border: .5px solid #ddd;
+  border-radius: 5px;
+  padding: 5px 8px;
+  background-color: #eee;
+}
+
+.size_item:hover {
+  cursor: pointer;
+}
+
+.size_item:focus {
+  background-color: #eee;
+}
+
+.price_holder {
+  padding-top: 15px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 22px;
+}
+
+.price_count {
+  max-width: 55px;
+}
+
+.btn_order {
+  padding: 8px 18px;
+  background-color: #FE5F1E;
+  color: #fff;
+  font-family: 'Jost', sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  border-radius: 30px;
+}
+
+.btn_order:hover {
+  color: #fff;
+  background-color: #ff8c5e;
+}
+
+.btn_order:focus {
+  border: 1px solid #FE5F1E;
+  background-color: #fff;
+  color: #FE5F1E;
+}
+
+button {
+  font-size: 13px;
+  background-color: #fff;
+  border: .5px solid #ddd;
+  border-radius: 5px;
+  padding: 5px 8px;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #f9fff8;
+}
+
+button:focus {
+  outline: none;
+}
+
+.order_index {
+  padding: 5px 10px;
+  border-radius: 50%;
+  background-color: #FE5F1E;
+  color: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  span, b {
+    color: #ccc;
+  }
+
+  .size_item, .packing_item {
+    background-color: #39383D;
+    /* border: none; */
+    border: .5px solid #2c2b2f;
+    color: #fff;
+  }
+
+  .size_item {
+    border: none;
+  }
+
+  .size_item:hover, .size_item:focus {
+    background-color: rgb(177, 165, 165);
+  }
+
+  .btn_order {
+    border: none;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .wrapper {
+    width: 100%;
+  }
+
+  .catalog_item {
+    width: 32%;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .wrapper {
+    width: 98%;
+  }
+
+  .size_item {
+    font-size: .5em;
+  }
+
+  .btn_order {
+    font-size: .5em;
+    padding: 7px 14px;
+    border-radius: 5px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .catalog_item {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .wrapper {
+    width: 90%;
+  }
+  
+  .catalog_item {
+    width: 100%;
+    margin-top: 20px;
+    margin-top: 20px;
+    justify-content: space-around;
+    border-bottom: 2px dashed #ccc;
+  }
+  
+  .catalog_item:hover {
+    cursor: pointer;
+    box-shadow: none;
+  }
+
+  .image {
+    height: 200px;
+  }
+
+  .name {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  .description {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+  }
+
+  .packing_item {
+    margin-bottom: 10px;
+  }
+
+  .size_item {
+    font-size: 18px;
+    font-weight: bold;
+    border: 1px solid #4f4d55;
+  }
+
+  .price {
+    font-size: 26px;
+  }
+
+  .price_holder {
+    margin-top: 10px;
+    padding: 0 3%;
+  }
+
+  .btn_order {
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+  }
+
+  @media screen and (max-width: 414px) {
+    .catalog_item {
+      height: 85vh;
+      justify-content: space-around;
+    }
+
+    .price_holder {
+      padding: 0;
+    }
+  }
+}

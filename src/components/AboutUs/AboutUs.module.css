@@ -1,0 +1,64 @@
+.wrapper {
+  width: 60%;
+  height: 70vh;
+  margin: auto;
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 30px;
+  border-bottom: 1px solid gray;
+  transition: .3s;
+  position: relative;
+}
+
+.title, .wrapper span {
+  font-family: 'Jost', sans-serif;
+}
+
+.title {
+  text-align: center;
+}
+
+.wrapper span {
+  font-weight: 300;
+}
+
+.wrapper a {
+  text-decoration: none;
+}
+
+.wrapper span:last-child {
+  position: absolute;
+  left: 4%;
+  bottom: 20vh;
+}
+
+@media (prefers-color-scheme: dark) {
+  .wrapper a {
+    color: rgb(114, 158, 120);
+  }
+} 
+
+@media screen and (max-width: 500px) {
+  .wrapper {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .wrapper {
+    margin: 0;
+    margin-top: 8vh;
+    height: 92vh;
+    text-align: left;
+    padding-top: 0;
+  }
+
+  .title {
+    margin: 2vh 0;
+    font-size: 3em;
+  }
+
+  .wrapper span {
+    font-size: 1em;
+  }
+}
