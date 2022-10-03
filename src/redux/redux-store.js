@@ -1,7 +1,6 @@
 import { combineReducers, createStore } from 'redux'
 
 import cartReducer from './cart-reducer'
-import cartToolkitReducer from './cartToolkitReducer'
 
 import catalogReducer from './catalog-reducer'
 import darkReducer from './darkTheme-reducer'
@@ -13,7 +12,7 @@ const reducers = combineReducers({
     catalogPage: catalogReducer,
     teaCardPage: teaCardReducer,
     deliveryPage: deliveryReducer,
-    cart: cartToolkitReducer,
+    cart: cartReducer,
     nav: navReducer,
     dark: darkReducer
 })
