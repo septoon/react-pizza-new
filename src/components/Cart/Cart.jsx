@@ -63,12 +63,15 @@ const Cart = () => {
 
                   {items.map((item, index) => {
                     const result = items.filter( elem => elem.id === item.id)
-                    let price = 0
-                    const itemIndex = items.indexOf(item)
                     
-                    return ( 
-                      <CartItem key={index} result={result} price={price} itemIndex={itemIndex} onClickRemovePizza={onClickRemovePizza}  {...item} />
-                    )
+                    const itemIndex = items.indexOf(item)
+
+                    // if (result.length === 1) {
+                      
+                      return ( 
+                        <CartItem key={index} result={result} itemIndex={itemIndex} onClickRemovePizza={onClickRemovePizza}  {...item} />
+                      )
+                    
                   })}
 
                     </div>

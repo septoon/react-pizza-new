@@ -11,16 +11,21 @@ const toolkitSlice = createSlice({
   reducers: {
     addPizzaToCart(state, action) {
       state.items.push(action.payload)
+      let newTotalPrice = 0
+
+      state.items.forEach(item => newTotalPrice += parseInt(item.activePrice) + 40 )
+      state.totalCount = state.items.length
+      state.totalPrice = newTotalPrice
     },
-    clearPizzaCart(state) {
+    clearPizzaCartAction(state) {
       state.items = []
     },
     removePizza(state, action) {
-      state.items.splice(action.payload)
+      state.items.items.filter(el => el.id !== action.payload)
     }
   }
 })
 
 export default toolkitSlice.reducer
 
-export const {addPizzaToCart, clearPizzaCart, removePizza} = toolkitSlice.actions
+export const {addPizzaToCartAction, clearPizzaCart, removePizza} = toolkitSlice.actions

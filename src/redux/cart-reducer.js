@@ -36,9 +36,10 @@ const cartReducer = (state = initialState, action) => {
       return newState
     }
     case MINUS_PIZZA: {
-      debugger
-      if(state.items.length > 1) state.items.shift()
-      return state
+      return {
+        ...state, 
+        items: [...state.items, state.items.filter(el => el.id !== action.payload)],
+      }
     }
     default:
       return state
@@ -47,6 +48,6 @@ const cartReducer = (state = initialState, action) => {
 
 export const addPizzaToCartAC = (pizzaObj) => ({ type: ADD_PIZZA_CART, payload: pizzaObj  })
 export const clearPizzaCartAC = () => ({ type: CLEAR_PIZZA_CART })
-export const removePizzaAC = (id) => ({ type: MINUS_PIZZA, payload: id  })
+export const removePizzaAC = (id) => ({ type: MINUS_PIZZA, payload: id })
 
 export default cartReducer
